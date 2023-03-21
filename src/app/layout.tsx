@@ -31,7 +31,7 @@ export default async function RootLayout({
               <Login />
             ):
             (
-            <div className='flex '>
+            <div className='flex'>
               <SideBar />
               <div className='bg flex-1 h-full'>{children}</div>
             </div>

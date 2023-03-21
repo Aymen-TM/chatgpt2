@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className=' flex justify-center items-center flex-col md:h-screen p-4'>
+    <main className=' flex justify-center items-center flex-col md:h-screen p-4 overflow-y-scroll'>
       <h1 className='text-3xl text-white font-bold '>ChatGPT</h1>
       <div className='grid grid-cols-1 sm:grid-cols-3 sm:w-3/4 gap-2  '>
         <div className='flex items-center flex-col space-y-2 '>
