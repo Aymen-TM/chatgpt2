@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .bg{
+        @apply bg-[#343541];
+    }
+    .bg-light{
+        @apply bg-[#40414f];
+    }
+    .bg-hover{
+        @apply hover:bg-[#202123];
+    }
+    .info-text{
+        @apply p-4 w-full sm:max-w-md bg-light rounded-lg bg-hover cursor-pointer;
+    }
+    .text-white-center{
+        @apply text-white text-center;
+    }
+    .bg-sideBar{
+        @apply bg-[#202123];
+    }
+    .newchat-btn{
+        @apply bg-transparent w-full border border-gray-600 hover:bg-[#2b2c2f]  text-gray-800  p-3 rounded inline-flex items-center space-x-3
+    }
+}
