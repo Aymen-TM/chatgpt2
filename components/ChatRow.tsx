@@ -34,10 +34,10 @@ const ChatRow = ({id}: Props) => {
     }
 
   return (
-    <Link href={`/chat/${id}`} className={`w-full flex justify-between items-center p-4 rounded-lg mt-2 ${Active?"bg-light":"bg-hover"}`} >
+    <Link href={`/chat/${id}`} className={`w-full flex justify-between  truncate items-center p-4 rounded-lg mt-2 ${Active?"bg-light":"bg-hover"}`} >
         <div className='flex space-x-4 items-center '>
             <ChatBubbleLeftIcon className='h-5 w-5 text-white' />
-            <p className='truncate text-white'>{messages?.docs[messages.docs.length-1]?.data().text || "New chat"} </p>
+            <p className='truncate text-white max-w-[15rem]'>{messages?.docs[messages.docs.length-1]?.data().text || "New chat"} </p>
         </div>
         <TrashIcon onClick={removeChat} className='h-5 w-5 text-red-400' />
     </Link>
