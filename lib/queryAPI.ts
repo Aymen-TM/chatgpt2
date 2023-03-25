@@ -3,8 +3,8 @@ import openai from "./chatgpt";
 
 const query = async function (prompt:string,chatId:string,model:string) {
     const res = await openai.createCompletion({
-      model:model,
-      prompt:prompt,
+      model,
+      prompt,
       max_tokens: 100,
       top_p:1,
       temperature: 0.7,

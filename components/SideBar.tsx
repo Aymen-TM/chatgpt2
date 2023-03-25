@@ -8,6 +8,7 @@ import {useCollection} from "react-firebase-hooks/firestore"
 import { collection, orderBy, query} from 'firebase/firestore'
 import { db } from '../firebase'
 import ChatRow from './ChatRow'
+import ModelSelection from './ModelSelection'
 
 type Props = {}
 
@@ -20,7 +21,6 @@ const SideBar = (props: Props) => {
     session &&
     query(collection(db, 'users',session.user?.email!,"chats"),orderBy("createdAt","asc")))
 
-    console.log(chats);
     
 
   return (
@@ -33,8 +33,8 @@ const SideBar = (props: Props) => {
 
             {/* model selection */}
 
-            <div>
-
+            <div className='hidden sm:inline'>
+              <ModelSelection />
             </div>
 
             {/*map through the chatrows */}

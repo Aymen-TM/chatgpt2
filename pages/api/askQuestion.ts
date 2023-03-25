@@ -24,13 +24,16 @@ export default async function handler(
     // ChatGPT query
     const respons = await query(prompt,chatId,model)
 
+    console.log(respons);
+    
+
     const message:Message = {
         text:respons || "ChatGPT was unable to finde answer fot that!",
         createdAt:admin.firestore.Timestamp.now(),
         user:{
             _id:"ChatGPT",
             name:'ChatGPT',
-            avatar:"https://link.papareact.com/89k"
+            avatar:"https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/512px-ChatGPT_logo.svg.png?20230318122128"
         }
     }
 
