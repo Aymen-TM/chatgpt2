@@ -17,7 +17,7 @@ const Chat = ({chatId}: Props) => {
       collection(db,"users",session?.user?.email!,"chats",chatId,"messages"),orderBy("createdAt","asc")
   ))
   return (
-    <div className='flex-1 text-white  flex flex-col gap-6 overflow-y-scroll scrollbar-hide'>
+    <div className='flex-1  text-white  flex flex-col py-5 gap-6 overflow-y-scroll scrollbar-hide'>
       {
         messages?.empty && (
           <>

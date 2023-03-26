@@ -1,14 +1,17 @@
 
 import { Inter } from 'next/font/google'
 import { SunIcon,BoltIcon,ExclamationTriangleIcon } from '@heroicons/react/24/outline'
+import NavBar from '../../components/NavBar'
 
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className=' flex justify-center items-center flex-col md:h-screen p-4 overflow-y-scroll'>
-      <h1 className='text-3xl text-white font-bold '>ChatGPT</h1>
+    <>
+    <NavBar />
+    <main className='flex flex-col items-center justify-center'> 
+      <h1 className='text-3xl text-white font-bold mb-10'>ChatGPT</h1>
       <div className='grid grid-cols-1 sm:grid-cols-3 sm:w-3/4 gap-2  '>
         <div className='flex items-center flex-col space-y-2 '>
           <SunIcon className="h-6 w-6 text-white" />
@@ -51,5 +54,6 @@ export default function Home() {
           </div>
       </div>
     </main>
+    </>
   )
 }

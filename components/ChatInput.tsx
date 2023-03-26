@@ -64,7 +64,7 @@ const ChatInput = ({chatId}: Props) => {
         })
     }
   return (
-    <div className='bg-light w-full  rounded-md overflow-hidden mt-4 max-w-xs sm:max-w-sm md:max-w-md  lg:max-w-3xl  mx-auto'>
+    <div className='bg-light w-full static bottom-20 right-0 left-0   rounded-md  max-w-xs sm:max-w-sm md:max-w-md  lg:max-w-3xl  mx-auto'>
         <form onSubmit={(e)=>sendMessage(e)} className='flex justify-between'>
             <input value={Prompt} onChange={(e)=>setPrompt(e.target.value)} type="text" name="message"   className="block w-full bg-transparent shadow-lg border-none  px-7 text-white  placeholder:text-gray-400 outline-none sm:text-sm sm:leading-6" placeholder="Write your thought" />
             <div className='p-2 flex justify-center items-center'>

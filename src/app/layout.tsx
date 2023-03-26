@@ -5,6 +5,7 @@ import './globals.css'
 import {authOptions} from '../../pages/api/auth/[...nextauth]'
 import Login from '../../components/Login'
 import ClientProvider from '../../components/ClientProvider'
+import NavBar from '../../components/NavBar'
 
 
 
@@ -21,7 +22,7 @@ export default async function RootLayout({
 
 
   const session = await getServerSession(authOptions)
-  console.log(session);
+
   
   return (
     <html lang="en">
@@ -33,10 +34,14 @@ export default async function RootLayout({
             ):
             (
             <div className='flex'>
-              <SideBar />
+              <div className='hidden md:block'>
+                <SideBar />
+              </div>
               {/* Client Provider  - Notifications */}
               <ClientProvider />
-              <div className='bg flex-1 h-full'>{children}</div>
+              <div className='bg flex-1'>
+                {children}
+                </div>
             </div>
             )
           }

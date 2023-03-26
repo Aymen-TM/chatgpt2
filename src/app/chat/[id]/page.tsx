@@ -1,6 +1,7 @@
 import React from 'react'
 import Chat from '../../../../components/Chat'
 import ChatInput from '../../../../components/ChatInput'
+import NavBar from '../../../../components/NavBar'
 
 type Props = {
   params:{
@@ -12,7 +13,8 @@ const ChatPage = ({params:{id}}: Props) => {
   console.log(id);
   
   return (
-    <div className='h-screen flex flex-col  py-4 overflow-hidden'>
+    <div className='flex flex-col relative py-4 h-screen'>
+      <NavBar />
       <Chat chatId={id} />
       <ChatInput chatId={id} />
     </div>

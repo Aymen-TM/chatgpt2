@@ -10,7 +10,9 @@ import { db } from '../firebase'
 import ChatRow from './ChatRow'
 import ModelSelection from './ModelSelection'
 
-type Props = {}
+type Props = {
+
+}
 
 
 const SideBar = (props: Props) => {
@@ -24,7 +26,7 @@ const SideBar = (props: Props) => {
     
 
   return (
-    <div className='flex flex-col lg:h-screen bg-sideBar p-2 max-w-sm overflow-y-auto md:min-w-[20rem]'>
+    <div className=' flex-col flex h-screen z-50 bg-sideBar p-2  overflow-y-hidden min-w-[20rem]'>
         <div className='flex-1'>
             {/* new chat */}
             <div>
