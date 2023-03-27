@@ -1,4 +1,5 @@
 import { useSession } from 'next-auth/react'
+import Image from 'next/image'
 import React from 'react'
 
 
@@ -15,8 +16,8 @@ const ChatBubbel = ({messageSender,avatar,text}: Props) => {
   return (
     <div className={`w-full p-4 text-white ${isUser ? "bg":"bg-light"}`}>
       <div className='flex items-center gap-4 max-w-xs sm:max-w-sm md:max-w-md  lg:max-w-3xl  mx-auto'>
-        <div className='h-10 w-10 rounded-full overflow-hidden self-start '>
-              <img src={avatar} alt="profile image"  />
+        <div className='h-10 w-10 rounded-full overflow-hidden self-start  relative'>
+              <Image src={avatar} alt="profile image" fill  />
         </div>
         <p className='flex-[1]'>{text}</p>
       </div>

@@ -17,13 +17,13 @@ export default function Home() {
           <SunIcon className="h-6 w-6 text-white" />
           <p className=' text-white text-lg'>Example</p>
           <div className='info-text'>
-            <p className='text-white-center'>"Explain quantum computing in simple terms"</p>
+            <p className='text-white-center'>&quot;Explain quantum computing in simple terms&quot;</p>
           </div>
           <div className='info-text'>
-            <p className='text-white-center'>"Got any creative ideas for a 10 year old’s birthday?"</p>
+            <p className='text-white-center'>&quot;Got any creative ideas for a 10 year old&apos;s birthday?&quot;</p>
           </div>
           <div className='info-text'>
-            <p className='text-white-center'>"How do I make an HTTP request in Javascript?"</p>
+            <p className='text-white-center'>&quot;How do I make an HTTP request in Javascript?&quot;</p>
           </div>
         </div>
         <div className='flex items-center flex-col  space-y-2'>
